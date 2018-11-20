@@ -5,7 +5,7 @@ var exphbs = require('express-handlebars');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-
+var path = require('path');
 // SETUP EXPRESS SERVER
 var app = express();
 
