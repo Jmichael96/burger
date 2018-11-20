@@ -1,15 +1,10 @@
 // Import (require) burger.js
-// =============================================================================
 var burger = require('../models/burgers');
 var express = require('express');
 
 
 // Create app router
-// =============================================================================
 var router = express.Router();
-
-
-
 
 router.get('/burgers', function (req, res) {
 	burger.selectAll(function (data) {
@@ -19,14 +14,12 @@ router.get('/burgers', function (req, res) {
 	});
 });
 
-
 // POST - insertOne
 router.post('/burgers/create', function (req, res) {
 	burger.insertOne(['burger_name'], [req.body.name], function () {
 		res.redirect('/burgers');
 	});
 });
-
 
 // PUT - updateOne
 router.put('/burgers/update/:id', function (req, res) {

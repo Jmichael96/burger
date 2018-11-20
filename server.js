@@ -3,13 +3,10 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var mysql = require('mysql');
-
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
-
 // SETUP EXPRESS SERVER
-// ==============================================
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -30,9 +27,7 @@ app.set('view engine', 'handlebars');
 var router = require('./controllers/burgers_controller');
 app.use('/', router);
 
-
 // DEFINE PORT AND START SERVER LISTEN
-// ==============================================
 var PORT = 8080;
 app.listen(process.env.PORT || PORT);
 console.log("Local host:" + PORT);

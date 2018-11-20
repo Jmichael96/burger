@@ -1,17 +1,13 @@
 // Import (require) connection.js
-// ==============================================================================
 var connection = require('../config/connections');
 
-
 // Functions that takes inputs and conditions
-// ==============================================================================
 function printQuestionMarks(num) {
 	var arr = [];
 
 	for (var i = 0; i < num; i++) {
 		arr.push('?');
 	}
-
 	return arr.toString();
 }
 
@@ -24,13 +20,10 @@ function objToSql(ob) {
 			arr.push(key + '=' + ob[key]);
 		}
 	}
-
 	return arr.toString();
 }
 
-
 // ORM turns inputs and conditions into database commands like SQL
-// ==============================================================================
 var orm = {
 	// Queries all records from the table
 	selectAll: function (tableInput, cb) {
@@ -97,8 +90,5 @@ var orm = {
 		});
 	}
 };
-
-
 // Export ORM
-// ==============================================================================
 module.exports = orm;

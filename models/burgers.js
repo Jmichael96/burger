@@ -1,10 +1,8 @@
 // Import (require) orm.js
-// ==============================================================================
 var orm = require('../config/orm.js');
 
 
 // Model uses burger specific inputs to call ORM functions
-// ==============================================================================
 var burger = {
 	selectAll: function (cb) {
 		orm.selectAll('burgers', function (res) {
@@ -28,8 +26,5 @@ var burger = {
 		});
 	}
 };
-
-
 // Export ORM
-// ==============================================================================
 module.exports = burger;
