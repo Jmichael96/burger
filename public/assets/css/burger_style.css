@@ -1,14 +1,15 @@
 #body{
-    background-image: url('/assets/img/background.jpg');
-    background-attachment: fixed;
-    background-position: center;
+    background-image: url('/assets/img/bobsburgers.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    color: black;
+    color: white;
 }
 img{
     border-radius: 10px;
-    margin: 5px;
+    margin: 3px;
+}
+.wrapper{
+    background-color: rgba(0, 0, 0, 0.432)
 }
 #submit-btn{
     background-color: rgb(1, 236, 1);
