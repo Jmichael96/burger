@@ -5,14 +5,12 @@ var exphbs = require('express-handlebars');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var path = require('path');
 // SETUP EXPRESS SERVER
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 // app.use(express.static(process.cwd() + '/public'));
-app.use(express.static(path.join(__dirname, 'public')));
-// parse application/x-www-form-urlencoded
+app.use(express.static(process.cwd() + '/public'));// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // override with POST having ?_method=DELETE
