@@ -41,7 +41,6 @@ router.delete('/burgers/delete/:id', function (req, res) {
 	});
 });
 
-
 // Export router
 // =============================================================================
 module.exports = router;
