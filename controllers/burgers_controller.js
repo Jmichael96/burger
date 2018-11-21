@@ -6,7 +6,8 @@ var express = require('express');
 // Create app router
 var router = express.Router();
 
-router.get('/burgers', function (req, res) {
+
+router.get('/', function (req, res) {
 	burger.selectAll(function (data) {
 		var hbsObject = { burgers: data };
 		console.log(hbsObject);
